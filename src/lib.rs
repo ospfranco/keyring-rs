@@ -147,6 +147,9 @@ use keyutils as default;
 ))]
 use mock as default;
 
+#[cfg(target_os = "android")]
+pub mod android;
+
 #[cfg(all(target_os = "freebsd", feature = "secret-service"))]
 pub mod secret_service;
 #[cfg(all(target_os = "freebsd", feature = "secret-service"))]
